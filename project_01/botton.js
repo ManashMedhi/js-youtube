@@ -1,5 +1,8 @@
 const buttons = document.querySelectorAll('.button');
-const body = document.querySelector('body');
+//  .button select all the class button form the html 
+
+const body = document.querySelector('body'); // here we have 
+//taken the body becoz we want to change the body color 
 
 buttons.forEach(function(button) {
     console.log(button);
@@ -19,4 +22,4 @@ buttons.forEach(function(button) {
             body.style.backgroundColor = e.target.id;
         }
     });
-});
+});  

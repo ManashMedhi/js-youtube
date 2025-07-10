@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+</body>
+<script>
+    function addlanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;  // Fixed template literal syntax
+        const temp = document.querySelector('.language');
+        temp.appendChild(li);
+    }
+    addlanguage("cpp");
+    addlanguage("python");
+    
+    // Below function is the optimized version of the above function
+    function addOptiLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    
+    // Example usage of the optimized function
+    addOptiLang("Java");
+    addOptiLang("Ruby");
+//or 
+    const secondLi = document.querySelector("li:nth-child(2)");
+const newLi = document.createElement('li');
+newLi.textContent = "mojo";
+secondLi.replaceWith(newLi);
+
+// or
+
+const temp = document.querySelector("li:first-child");
+temp.outerHTML = <li>manash medhi </li>
+
+// how to remove the element form the web page
+const removeLast = document.querySelector('li:last-chid')
+removeLast.remove();
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with  chai and code</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent); //o/p gotay days lan paim
+    console.log(parent.children)  // amak html collection de i.e array hena hobo kin2 array er properties nade . so oi karone ami for loop er bhitorot parent,children disung
+
+    console.log(parent.children[1].innerHTML);  // o/p tuesday paim
+    
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+    
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);  // monday
+    console.log(parent.lastElementChild); // wednesday paim
+ 
+    const dayone = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement); //o/p monday
+    console.log(dayOne.nextElementSiblings); // o/p  tuesday
+    console.log("NODE:", parent.childNodes);
+</script>
+</html>

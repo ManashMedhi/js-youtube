@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+   <button id="stop">stop</button>
+   </body>
+   <script>
+    //  amak settime out function tay 
+    // de j t sec er pasot he mui kam 
+    // ta korim  e.g 2000 ta change koria dek tahale 
+    // buja pabe
+    const sayManash = function(){
+     console.log("manash");
+   }
+
+   const changeText = function(){
+    document.querySelector('h1').innerHTML = "smriti"
+   }
+   const changeme = setTimeout(changeText,2000);
+//   now we want that amar juta heading 1 ase uta 
+// jate change nahoy so ami clearTimeout lagaim
+const stopTimeOut = document.getElementById('stop')
+stopTimeOut.addEventListener('click' , function(){
+    clearTimeout(changeme);
+    console.log("STOPPED");
+})
+</script>
+</html>

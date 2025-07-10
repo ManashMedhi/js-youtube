@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="start">start</button>
+   <button id="stop">stop</button>
+   </body>
+   <script>
+//    ami alay porim setinterval
+const sayDate = function(str){
+    console.log(str , Date.now());
+}
+//  alay ki hobo ja amar juat manash ase uta 2 sec pase pase start hobo
+
+
+const getID_of_the_start = document.getElementById('start')
+getID_of_the_start.addEventListener('click' ,function(){
+    console.log("Inrerval STARTED")
+    const temp = setInterval(sayDate ,1000, "manash")
+    const get_id_of_stop = document.getElementById('stop')
+    get_id_of_stop.addEventListener('click', function(){
+        clearInterval(temp)
+        console.log("Interval STOPPED")
+    })
+})
+</script>
+</html>

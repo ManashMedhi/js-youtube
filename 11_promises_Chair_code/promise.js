@@ -68,13 +68,20 @@ promiseFour.then((user)=>{
 
 //  ...................................................................... 
 
+//  Calling an API Using Fetch
+// It connects to a website (fake API) and asks for user data.
+// First it prints the raw response.
+// Then it converts that response to a list of users and prints it.
+// If anything goes wrong (like no internet), it prints an error.
+
 
 consumePromiseFive()
 async function getAllusers(){
     try {
         const response = await fetch('http://jsonplaceholder.typicode.com/users')
         console.log(response)
-        const data = await response.json()
+        const data = await response.json()  
+        // amar response juta ase uta o soliba lagile time lage so ami await use korsung
         console.log(data);
     } catch (error) {
         console.log("E: ", error);
@@ -82,5 +89,7 @@ async function getAllusers(){
     }
 }
 
+
+//  OR By another method
 
 getAllusers();
